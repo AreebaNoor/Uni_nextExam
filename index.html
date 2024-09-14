@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <title>Uni Dashboard</title>
+    <style>
+        @font-face {
+            font-family: Gyahegi;
+            src: url(./Media/Gyahegi.otf);
+        }
+        @font-face {
+            font-family: Garges;
+            src: url("./Media/Garges.ttf")
+        }
+        .mainFlex {
+            display: flex;
+            flex-direction: column;
+            justify-content: center; 
+            margin: 5px;
+            padding: 5px;
+            background-color: #d8e2da;
+            border-radius: 5px;
+        }
+        #header {
+            font-family: Gyahegi; 
+            margin: 5px;
+            font-size: 20px;
+            text-align: center;
+        }
+        .text {
+            font-family: 'Times New Roman', Times, serif;
+            margin: 5px;
+            font-size: 20;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="mainFlex">
+            <p id="header">Next Exam: </p>
+            <p class="text" style="font-weight: bold;">Blokk 2 - Cellebio</p>
+            <p class="text">Torsdag 10. Oktober</p>
+            <p id="daysleftP" class="text"></p>
+    </div>
+    <script>
+        let daysleftEl = document.getElementById("daysleftP");
+        let currentdate = new Date();
+        let examdate = new Date(2024, 10-1, 10); // enter the date of the exam (with -1 in months)
+        let oneday = 24*60*60*1000; // hours*min*sec*millisec
+
+        daysleftEl.innerHTML = Math.round(Math.abs((examdate - currentdate)/oneday));
+    </script>
+    
+</body>
+</html>
