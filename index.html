@@ -38,14 +38,15 @@
 <body>
     <div class="mainFlex">
             <p id="header">Next Exam: </p>
-            <p class="text" style="font-weight: bold;">Blokk 3 - BIM</p>
-            <p class="text">Onsdag 18. Desember</p>
+            <p class="text" style="font-weight: bold;">Skriftlig deleksamen</p>
+            <p class="text" style="font-weight: bold;">Muntlig eksamen i Anatomi </p>
+            <p class="text">Uke 41 - Moduluke 30</p>
             <p id="daysleftP" class="text"></p>
     </div>
     <script>
         let daysleftEl = document.getElementById("daysleftP");
         let currentdate = new Date();
-        let examdate = new Date(2024, 12-1, 18); // enter the date of the exam (with -1 in months)
+        let examdate = new Date(2025, 10-1, 6); // enter the date of the exam (with -1 in months)
         let oneday = 24*60*60*1000; // hours*min*sec*millisec
 
         daysleftEl.innerHTML = Math.round(Math.abs((examdate - currentdate)/oneday)) + " dager igjen" ;
