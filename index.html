@@ -42,6 +42,8 @@
             <p id="daysleftP1" class="text"></p>
             <p class="text" style="font-weight: bold;">Muntlig Anatomieksamen</p>
             <p id="daysleftP2" class="text"></p>
+            <p class="text" style="font-weight: bold;">Muntlig Propedeutikkeksamen</p>
+            <p id="daysleftP3" class="text"></p>
     </div>
     <script>
         let currentdate = new Date();
@@ -53,8 +55,12 @@
         let daysleftEl2 = document.getElementById("daysleftP2");
         let examdate2 = new Date(2025, 10-1, 29); // enter the date of the exam (with -1 in months)
 
+        let daysleftEl3 = document.getElementById("daysleftP3");
+        let examdate3 = new Date(2025, 12-1, 19);
+
         daysleftEl1.innerHTML = Math.round(Math.abs((examdate1 - currentdate)/oneday)) + " dager igjen";
         daysleftEl2.innerHTML = Math.round(Math.abs((examdate2 - currentdate)/oneday)) + " dager igjen";
+        daysleftEl3.innerHTML = Math.round(Math.abs((examdate3 - currentdate)/oneday)) + " dager igjen";
     </script>
     
 </body>
